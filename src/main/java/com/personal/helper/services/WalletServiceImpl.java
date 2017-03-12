@@ -5,6 +5,8 @@ import com.personal.helper.repositories.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by hnastevska on 3/5/2017.
  */
@@ -20,6 +22,11 @@ public class WalletServiceImpl implements WalletService {
 
     public void createOrUpdateWollet(Wallet wallet) {
         wolletRepository.save(wallet);
+    }
+
+    @Override
+    public List<Wallet> findWollet() {
+        return wolletRepository.findAll();
     }
 
     public Wallet findWollet(Long walletId) {

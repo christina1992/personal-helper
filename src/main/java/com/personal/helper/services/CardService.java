@@ -7,4 +7,6 @@ import com.personal.helper.models.Card;
  */
 public interface CardService {
     void saveCard(Card card);
+
+    Card find(Long id);
 }
