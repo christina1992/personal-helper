@@ -118,4 +118,8 @@ public class MoneyService {
 
         return list.stream().filter(x -> x.getMonth() == month).collect(Collectors.toList());
     }
+
+    public void deleteSpendingById(Long id) {
+        spendingRepo.delete(id);
+    }
 }

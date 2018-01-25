@@ -1,4 +1,4 @@
-package com.personal.helper.cors;
+package com.personal.helper.security;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -24,7 +24,7 @@ public class SimpleCORSFilter implements Filter {
 
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-          response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Max-Age", "3600");
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Headers", "Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization");
@@ -32,7 +32,6 @@ public class SimpleCORSFilter implements Filter {
 
         chain.doFilter(req, res);
        /* try {
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ServletException e) {

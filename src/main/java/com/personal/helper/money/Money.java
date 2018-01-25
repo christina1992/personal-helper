@@ -1,9 +1,7 @@
 package com.personal.helper.money;
 
-import com.sun.istack.internal.Nullable;
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

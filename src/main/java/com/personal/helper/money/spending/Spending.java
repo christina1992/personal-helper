@@ -1,6 +1,5 @@
 package com.personal.helper.money.spending;
 
-import com.sun.istack.internal.Nullable;
 import lombok.Data;
 
 import javax.persistence.Entity;

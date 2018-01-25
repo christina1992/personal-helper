@@ -107,4 +107,9 @@ public class MoneyController {
 
     }
 
+    @RequestMapping(value = "/money/deleteSpending/{id}", method = RequestMethod.DELETE)
+    public void deleteSpendingById(@PathVariable Long id) {
+        moneyService.deleteSpendingById(id);
+
+    }
 }
